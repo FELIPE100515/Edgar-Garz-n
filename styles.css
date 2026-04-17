@@ -1,0 +1,814 @@
+/* --- 1. Variables CSS (Paleta Profesional) --- */
+:root {
+    --primary-color: #0f2027; /* Azul/Negro Profundo - Autoridad */
+    --secondary-color: #203a43; /* Azul Claro - Confianza */
+    --accent-color: #c5a880; /* Dorado/Champán - Excelencia */
+    --accent-hover: #b0936b;
+    --text-dark: #333333;
+    --text-light: #f4f4f4;
+    --text-muted: #666666;
+    --bg-light: #ffffff;
+    --bg-gray: #f8f9fa;
+    --bg-dark: #1a1a1a;
+    
+    /* Tipografías */
+    --font-heading: 'Merriweather', 'Playfair Display', Georgia, serif;
+    --font-body: 'Open Sans', 'Roboto', 'Segoe UI', system-ui, sans-serif;
+    
+    --transition: all 0.3s ease;
+    --side-padding: max(5%, calc((100vw - 1200px) / 2));
+}
+
+/* --- 2. Estilos Base (Desktop First) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 1.2rem auto 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Botones --- */
+.btn-primary, .btn-submit, .btn-whatsapp {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--bg-light);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(197, 168, 128, 0.4);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    z-index: 9999;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp i {
+    font-size: 1.5rem;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* --- 3. Cabecera y Navegación --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem var(--side-padding);
+    background-color: var(--bg-light);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.main-nav a {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 4. Sección Hero --- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    min-height: 85vh;
+    padding: 0 var(--side-padding);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+    z-index: 2;
+    padding-right: 3rem;
+}
+
+.hero-content h1 {
+    color: var(--text-light);
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    color: #e0e0e0;
+    font-weight: 300;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+
+.hero-image img {
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    max-width: 100%;
+    max-height: 650px;
+    height: auto;
+    object-fit: contain;
+    border: 3px solid var(--accent-color);
+}
+
+/* --- 5. Sección de Servicios V2 --- */
+.services-section {
+    padding: 6rem var(--side-padding);
+    background-color: var(--bg-gray);
+}
+
+.services-container-v2 {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.services-left-list {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-card-v2 {
+    background-color: var(--bg-light);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 4px solid #ddd;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.service-card-v2:hover {
+    transform: translateX(10px);
+    border-left-color: var(--accent-color);
+}
+
+.service-card-v2.activo {
+    background-color: var(--primary-color);
+    border-left-color: var(--accent-color);
+}
+
+.service-card-v2.activo h3 {
+    color: var(--bg-light);
+}
+
+.service-card-v2 h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.services-right-main {
+    flex: 1;
+}
+
+.tab-content-v2 {
+    height: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.tab-content-v2.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main-focus-card {
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 4rem 3rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(15, 32, 39, 0.2);
+}
+
+.service-detail-card {
+    border-top: 4px solid var(--accent-color);
+}
+
+.main-focus-card h3 {
+    color: var(--bg-light);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-focus-card p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #cbd5e0;
+    margin-bottom: 2rem;
+}
+
+.focus-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.focus-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.focus-features li i {
+    color: var(--accent-color);
+}
+
+/* --- 6. Pilares de Confianza --- */
+.trust-pillars-section {
+    padding: 6rem var(--side-padding);
+    background-color: var(--bg-light);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: center;
+}
+
+.pillar-card {
+    padding: 2rem;
+}
+
+.pillar-card h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.2rem;
+}
+
+.pillar-card p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* --- 7. Enfoque Humano --- */
+.human-approach-section {
+    padding: 7rem var(--side-padding);
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    position: relative;
+}
+
+.human-approach-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.human-approach-content h2 {
+    color: var(--accent-color);
+}
+
+.human-approach-content h2::after {
+    background-color: var(--bg-light);
+}
+
+.human-approach-content p {
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #f0f0f0;
+}
+
+/* --- 8. Perfil y Trayectoria --- */
+.profile-section {
+    padding: 6rem var(--side-padding);
+    background-color: var(--bg-gray);
+}
+
+.profile-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.legal-page .profile-content {
+    max-width: 1000px;
+}
+
+.legal-page .profile-content h1 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.profile-detail {
+    background-color: var(--bg-light);
+    padding: 2.5rem;
+    border-left: 6px solid var(--accent-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.profile-detail.highlight {
+    background-color: var(--bg-light);
+    border-left: 6px solid var(--accent-color);
+}
+
+.profile-detail h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.profile-detail p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* --- 9. Contacto --- */
+.contact-section {
+    padding: 6rem var(--side-padding);
+    background-color: var(--bg-light);
+}
+
+.contact-container {
+    display: flex;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-details-wrapper {
+    flex: 1;
+    background-color: var(--bg-gray);
+    padding: 3.5rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.interactive-map {
+    flex: 1.5;
+}
+
+.interactive-map iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.social-icons-contact {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.directory h3 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+}
+
+.directory p {
+    margin-bottom: 1.8rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.directory strong {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.social-contact p {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons-contact .social-icon {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+/* --- 10. Pie de Página (Footer) --- */
+.main-footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 5rem var(--side-padding) 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-links h4 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul li {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #bbbbbb;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-quote p {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.footer-bottom a {
+    color: #777;
+    margin: 0 0.5rem;
+}
+
+.footer-bottom a:hover {
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   11. PUNTOS DE CORTE PARA RESPONSIVIDAD (Media Queries)
+   Aquí puedes ajustar el comportamiento de la web al hacerse pequeña.
+   ========================================================================== */
+
+/* --- A. VISTA TABLET (Pantallas medianas y tablets en horizontal) --- */
+@media (max-width: 992px) {
+    /* El Hero se apila verticalmente */
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .hero-image {
+        justify-content: center;
+    }
+    .hero-image img {
+        max-height: 450px;
+    }
+    
+    /* La sección de servicios rompe la proporción 30/70 y se apila */
+    .services-container-v2 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .services-left-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .service-card-v2 {
+        flex: 1 1 200px;
+        text-align: center;
+        padding: 1rem;
+        border-left: none;
+        border-bottom: 4px solid #ddd;
+    }
+    .service-card-v2:hover {
+        transform: translateY(-5px);
+        border-bottom-color: var(--accent-color);
+    }
+    .service-card-v2.activo {
+        border-bottom-color: var(--accent-color);
+    }
+    .services-left-list, .services-right-main {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    /* Pilares en 2 columnas */
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+
+    /* El contacto se apila */
+    .contact-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .contact-details-wrapper {
+        padding: 2.5rem;
+    }
+
+    /* El footer centra su contenido */
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-quote p {
+        text-align: center;
+    }
+}
+
+/* --- B. VISTA MÓVIL (Smartphones y tablets pequeñas en vertical) --- */
+@media (max-width: 768px) {
+    /* La cabecera clásica se centra y se envuelve */
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-light);
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .main-nav a {
+        font-size: 1rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    .hero-image img {
+        max-height: 350px;
+    }
+    
+    /* Los pilares pasan a 1 columna */
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Enfoque humano */
+    .human-approach-section {
+        padding: 5rem var(--side-padding);
+    }
+    .human-approach-content p {
+        font-size: 1.15rem;
+    }
+
+    /* Ajuste de títulos generales */
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Ajuste en tarjetas de perfil legal */
+    .profile-detail {
+        padding: 1.5rem;
+    }
+    
+    /* Ajuste específico para páginas legales en móviles */
+    .legal-page .profile-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-content {
+        padding: 2rem 1rem !important;
+    }
+    
+    .main-focus-card {
+        padding: 2.5rem 1.5rem;
+    }
+    .main-focus-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    /* Botón flotante WhatsApp más discreto en móvil */
+    .btn-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    .btn-whatsapp i {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- C. VISTA MÓVIL PEQUEÑA (Pantallas muy estrechas) --- */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+    .main-nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .services-left-list {
+        flex-direction: column;
+    }
+    .service-card-v2 {
+        border-left: 4px solid #ddd;
+        border-bottom: none;
+        text-align: left;
+    }
+    .service-card-v2:hover {
+        transform: translateX(5px);
+        border-left-color: var(--accent-color);
+        border-bottom-color: transparent;
+    }
+    .service-card-v2.activo {
+        border-left-color: var(--accent-color);
+        border-bottom-color: transparent;
+    }
+    .contact-details-wrapper {
+        padding: 1.5rem;
+    }
+    .directory h3 {
+        font-size: 1.8rem;
+    }
+    .directory p {
+        font-size: 1.1rem;
+    }
+}
