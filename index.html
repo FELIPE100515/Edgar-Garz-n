@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EGN Abogados | Edgar Garzón Naranjo - Derecho Administrativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 1. Cabecera (Header / Menú) -->
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">Edgar Garzón Naranjo</a>
+        </div>  
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#valores">Valores</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-cta">
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Sección Hero (Impacto Inicial) -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h1>Defensa Legal con Rigor Técnico y Sentido Humano</h1>
+                <p>Especialista en Derecho Administrativo. Soluciones jurídicas basadas en la disciplina, la experiencia institucional y la excelencia académica.</p>
+                <a href="#servicios" class="btn-primary">Ver Servicios</a>
+            </div>
+            <div class="hero-image">
+                <!-- Visual: Foto profesional del Dr. Garzón en su oficina o un entorno de despacho serio -->
+                <img src="public/dr-garzon-hero.jpg" alt="Dr. Edgar Garzón Naranjo en su despacho">
+            </div>
+        </section>
+
+        <!-- 3. Portafolio de Servicios (La Solución) -->
+        <section id="servicios" class="services-section">
+            <h2>Portafolio de Servicios</h2>
+            <div class="services-container-v2">
+                <div class="services-left-list">
+                    <div class="service-card-v2 activo" data-servicio="administrativo">
+                        <h3>Derecho Administrativo</h3>
+                    </div>
+                    <div class="service-card-v2" data-servicio="criminalistica">
+                        <h3>Consultoría Criminalística</h3>
+                    </div>
+                    <div class="service-card-v2" data-servicio="litigio">
+                        <h3>Litigio General</h3>
+                    </div>
+                </div>
+                <div class="services-right-main">
+                    <!-- Contenidos de Servicios -->
+                    <div id="administrativo" class="tab-content-v2 activo">
+                        <div class="main-focus-card service-detail-card">
+                            <h3>Derecho Administrativo</h3>
+                            <p>Especialistas en la regulación de la administración pública y su relación con los ciudadanos. Gestionamos procesos de responsabilidad estatal, nulidad y restablecimiento del derecho, y asesoría en contratación estatal.</p>
+                            <ul class="focus-features">
+                                <li><i class="fas fa-gavel"></i> Procesos ante el Estado</li>
+                                <li><i class="fas fa-file-contract"></i> Contratación Pública</li>
+                                <li><i class="fas fa-user-shield"></i> Defensa de Servidores</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="criminalistica" class="tab-content-v2" style="display:none;">
+                        <div class="main-focus-card service-detail-card">
+                            <h3>Consultoría Criminalística</h3>
+                            <p>Aportamos una ventaja estratégica mediante el análisis científico de la evidencia. Nuestro equipo técnico robustece la defensa con peritajes precisos y reconstrucción analítica de hechos.</p>
+                            <ul class="focus-features">
+                                <li><i class="fas fa-microscope"></i> Análisis Pericial</li>
+                                <li><i class="fas fa-search"></i> Investigación de Campo</li>
+                                <li><i class="fas fa-fingerprint"></i> Pruebas Técnicas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="litigio" class="tab-content-v2" style="display:none;">
+                        <div class="main-focus-card service-detail-card">
+                            <h3>Litigio General</h3>
+                            <p>Defensa integral en diversas áreas del derecho, manteniendo siempre el compromiso con la justicia y el bienestar del cliente. Abordamos casos complejos con una metodología probada de éxito.</p>
+                            <ul class="focus-features">
+                                <li><i class="fas fa-users"></i> Enfoque Social</li>
+                                <li><i class="fas fa-university"></i> Rigor Académico</li>
+                                <li><i class="fas fa-handshake"></i> Solución de Conflictos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Pilares de Confianza (Sección Central) -->
+        <section id="valores" class="trust-pillars-section">
+            <h2>Pilares de Confianza</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Transparencia</h3>
+                    <p>Diagnósticos claros, honestos y objetivos sobre la viabilidad y el curso de cada caso desde el primer momento.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Rigor Técnico</h3>
+                    <p>Estrategias legales sólidas fundamentadas en la jurisprudencia y doctrina académica más actualizada.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Compromiso Social</h3>
+                    <p>Un enfoque donde el cliente es escuchado, respetado y valorado como ser humano, no solo como un número de proceso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Enfoque Humano y Social -->
+        <section class="human-approach-section">
+            <div class="human-approach-content">
+                <h2>Más que leyes, defendemos personas</h2>
+                <p>Nuestra práctica privada nace del firme propósito de generar un impacto social positivo y ofrecer un acompañamiento legal cercano, humano y digno para quienes buscan justicia en Bucaramanga y todo el país. Creemos que detrás de cada expediente hay una historia y una vida que merece ser defendida con honor.</p>
+            </div>
+        </section>
+
+        <!-- 6. Perfil Profesional y Trayectoria (Cierre de Autoridad) -->
+        <section id="trayectoria" class="profile-section">
+            <h2>Perfil Profesional y Trayectoria</h2>
+            <div class="profile-content">
+                <div class="profile-detail">
+                    <h3>El Honor de la Disciplina</h3>
+                    <p>Forjado en la exigencia institucional como Oficial de la Policía (Sargento Mayor), donde interiorizó los valores de orden, lealtad y rectitud que hoy aplica en cada defensa.</p>
+                </div>
+                <div class="profile-detail">
+                    <h3>La Excelencia Académica</h3>
+                    <p>Especialista y Posgrado en la prestigiosa Universidad Externado de Colombia. Además, ha liderado la academia como Decano y Coordinador en la UMB (Universidad Manuela Beltrán).</p>
+                </div>
+                <div class="profile-detail">
+                    <h3>Nuestro Legado</h3>
+                    <p>Una combinación única de experiencia en la calle, rigor académico y capacidad de mando, que se traduce en una ventaja estratégica invaluable para la tranquilidad de nuestros clientes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Canal de Comunicación (Conversión) -->
+        <section id="contacto" class="contact-section">
+            <h2>Canal de Comunicación</h2>
+            <div class="contact-container">
+                <!-- Información de contacto a la izquierda -->
+                <div class="contact-details-wrapper">
+                    <div class="directory">
+                        <h3>Directorio Profesional</h3>
+                        <p><strong>📍 Oficina:</strong> Cll 37 # 15-25 ofc 801</p>
+                        <p><strong>📩 Correo:</strong> derechoedgar@gmail.com</p>
+                        <p><strong>📞 Teléfono:</strong> 310 3437941</p>
+                        <div class="social-contact">
+                            <p><strong>📱 Redes Sociales:</strong></p>
+                            <div class="social-icons-contact">
+                                <a href="https://www.linkedin.com/in/edgar-garzon-naranjo-905647184/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.facebook.com/edgar.garzonnaranjo" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa Interactivo Ampliado -->
+                <div class="interactive-map">
+                    <iframe src="https://maps.google.com/maps?q=Cll%2037%20%23%2015-25%2C%20Bucaramanga&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Pie de Página (Footer) -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-quote">
+                <p><em>"Disciplina y Justicia al servicio del ciudadano"</em></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Edgar Garzón Naranjo - Abogados. Todos los derechos reservados. | <a href="aviso-legal.html">Aviso Legal</a> | <a href="politica-privacidad.html">Política de Privacidad</a></p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/3103437941" target="_blank" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Consulta Express</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

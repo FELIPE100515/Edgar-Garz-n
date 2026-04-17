@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asesoría Legal | Derecho Administrativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Firma Legal</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#perfil">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Defensa y Asesoría Experta en Relaciones con el Estado</h1>
+            <p>Protegemos sus intereses con rigor, ética y profundo conocimiento del Derecho Administrativo.</p>
+            <a href="#contacto" class="btn-primary">Agendar Consulta</a>
+        </section>
+
+        <section id="servicios" class="servicios-resumen">
+            <h2>Nuestras Especialidades en Derecho Administrativo</h2>
+            <div class="grid-servicios">
+                <div class="card-servicio">
+                    <h3>Contratación Estatal</h3>
+                    <p>Asesoría integral en licitaciones, pliegos de condiciones y ejecución de contratos con entidades públicas.</p>
+                </div>
+                <div class="card-servicio">
+                    <h3>Responsabilidad del Estado</h3>
+                    <p>Demandas de reparación directa por daños causados por acción u omisión de la administración.</p>
+                </div>
+                <div class="card-servicio">
+                    <h3>Procesos Disciplinarios</h3>
+                    <p>Defensa técnica especializada ante la Procuraduría, personerías y oficinas de control interno.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Firma Legal - Expertos en Derecho Administrativo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
